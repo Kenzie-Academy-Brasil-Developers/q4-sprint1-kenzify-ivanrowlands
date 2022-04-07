@@ -32,7 +32,7 @@ const lodash_mapvalues_1 = __importDefault(require("lodash.mapvalues"));
 exports.createPlaylistShape = yup.lazy((artist) => yup.object((0, lodash_mapvalues_1.default)(artist, () => yup.array(yup.object({
     title: yup.string().required(),
     duration: yup.string().required(),
-    releasedDate: yup.date().required(),
+    releasedDate: yup.date(),
     listenedByMe: yup.number().default(0),
     genres: yup.array().strict().of(yup.string()).required(),
 })))));

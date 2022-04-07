@@ -8,7 +8,7 @@ export const createPlaylistShape = yup.lazy((artist) =>
         yup.object({
           title: yup.string().required(),
           duration: yup.string().required(),
-          releasedDate: yup.date().required(),
+          releasedDate: yup.date(),
           listenedByMe: yup.number().default(0),
           genres: yup.array().strict().of(yup.string()).required(),
         })
